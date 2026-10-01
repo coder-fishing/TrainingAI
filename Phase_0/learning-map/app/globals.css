@@ -292,6 +292,14 @@ body {
   }
 }
 
+.glass-canvas {
+  background-color: #0a0f1c;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.055) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
 @layer utilities {
   /* Apple-standard glass utility - Very subtle and refined */
   /* This creates Apple's standard glassmorphism with moderate blur */

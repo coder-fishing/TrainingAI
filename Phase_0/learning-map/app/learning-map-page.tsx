@@ -29,7 +29,7 @@ export default function LearningMapPage() {
         Skip to content
       </a>
       <SiteHeader />
-      <main id="content">
+      <main id="content" className="glass-canvas">
         <section
           id="top"
           className="mx-auto max-w-7xl px-5 pb-18 pt-16 sm:px-8 sm:pt-24"

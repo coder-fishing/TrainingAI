@@ -13,7 +13,7 @@ import { SectionHeading } from "./section-heading";
 
 export function BooksSection() {
   return (
-    <section id="books" className="border-y border-white/10 bg-[#101824]">
+    <section id="books" className="border-y border-white/10">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
         <SectionHeading
           eyebrow="CURRICULUM BOOKS"
@@ -120,7 +120,7 @@ export function HardestPhase() {
   return (
     <section
       id="hardest"
-      className="border-y border-violet-300/20 bg-[#141126]"
+      className="border-y border-violet-300/20"
     >
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
         <SectionHeading
