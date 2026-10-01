@@ -27,7 +27,7 @@ export function StageDetails() {
               hover="lift"
               id={stage.id}
               key={stage.id}
-              className={`scroll-mt-24 border py-0 backdrop-blur-md ${index >= 3 ? "border-violet-300/25 bg-violet-300/[.07]" : "border-white/15 bg-white/[.055]"}`}
+              className={`scroll-mt-24 py-0 ${index >= 3 ? "border-violet-300/25" : "border-white/15"}`}
             >
               <CardHeader className="p-6">
                 <p className="font-mono text-xs tracking-[.16em] text-cyan-300">

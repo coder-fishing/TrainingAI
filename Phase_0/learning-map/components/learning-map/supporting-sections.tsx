@@ -22,7 +22,7 @@ export function BooksSection() {
         />
         <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
           {books.map(([title, author, role, range]) => (
-            <Card variant="glass" hover="lift"
+            <Card
               key={title}
               className="min-h-64 border-t-2 border-violet-300/80 bg-white/[.06] py-0 backdrop-blur-md"
             >
@@ -55,7 +55,7 @@ export function MindsetsSection() {
         copy="The map asks not just what to build, but how to know it works and holds up."
       />
       <div className="mt-12 grid gap-5 lg:grid-cols-2">
-        <Card variant="crystal" className="border-l-2 border-cyan-300 bg-cyan-300/[.07] py-0">
+        <Card className="border-l-2 border-cyan-300 bg-cyan-300/[.07] py-0 backdrop-blur-md">
           <CardContent className="p-7">
             <Telescope aria-hidden className="size-7 text-cyan-300" />
             <h3 className="mt-8 text-2xl font-semibold text-white">
@@ -71,7 +71,7 @@ export function MindsetsSection() {
             </p>
           </CardContent>
         </Card>
-        <Card variant="frosted" className="border-l-2 border-emerald-300 bg-emerald-300/[.07] py-0">
+        <Card className="border-l-2 border-emerald-300 bg-emerald-300/[.07] py-0 backdrop-blur-md">
           <CardContent className="p-7">
             <GitBranch aria-hidden className="size-7 text-emerald-300" />
             <h3 className="mt-8 text-2xl font-semibold text-white">
@@ -87,7 +87,7 @@ export function MindsetsSection() {
           </CardContent>
         </Card>
       </div>
-      <Card variant="glass" className="mt-5 border border-amber-200/25 bg-amber-200/[.08] py-0">
+      <Card className="mt-5 border border-amber-200/25 bg-amber-200/[.08] py-0 backdrop-blur-md">
         <CardContent className="p-6">
           <p className="font-mono text-xs tracking-wider text-amber-100">
             THE LAST-MILE CHALLENGE
@@ -133,7 +133,7 @@ export function HardestPhase() {
         />
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {reasons.map(([number, title, copy]) => (
-            <Card variant="frosted"
+            <Card
               key={number}
               className="border border-violet-300/25 bg-violet-300/[.08] py-0 backdrop-blur-md"
             >
@@ -163,7 +163,7 @@ export function RelationshipsAccordion() {
         title="What each concept gives to the next."
         copy="Expand a relationship to see the learning progression in plain language."
       />
-      <Card variant="glass" className="mt-10 divide-y divide-white/10 border border-white/15 bg-white/[.055] py-0">
+      <Card className="mt-10 divide-y divide-white/10 border border-white/15 bg-white/[.055] py-0 backdrop-blur-md">
         {relationships.map(([from, to, description], index) => {
           const expanded = open === index;
           return (

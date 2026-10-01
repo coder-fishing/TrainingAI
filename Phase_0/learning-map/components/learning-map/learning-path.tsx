@@ -9,7 +9,8 @@ import {
   ShieldCheck,
   Wrench,
 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/glass/card";
+import {  CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/glass/card";
 import { stages } from "@/data/learning-map";
 import { SectionHeading } from "./section-heading";
 
@@ -31,8 +32,6 @@ export function LearningPath({ activeStage, onSelect }: Props) {
             return (
               <div key={stage.id} className="flex min-w-0 flex-1 items-center">
                 <Card
-                  variant={active ? "crystal" : "glass"}
-                  hover="lift"
                   className={`min-h-28 flex-1 border bg-white/[.055] py-0 backdrop-blur-md transition hover:bg-white/[.09] ${active ? "border-cyan-300/80 shadow-[0_0_32px_rgba(34,211,238,.12)]" : "border-white/15"}`}
                 >
                   <CardContent className="p-0">
@@ -74,7 +73,7 @@ export function LearningPath({ activeStage, onSelect }: Props) {
           })}
         </div>
         <div className="mt-8 grid gap-3">
-          <Card variant="crystal" className="border-cyan-300/25 bg-cyan-300/[.07] py-0">
+          <Card className="border border-cyan-300/25 bg-cyan-300/[.07] py-0 backdrop-blur-md">
             <CardContent className="flex gap-4 p-4">
               <ShieldCheck
                 aria-hidden
@@ -91,7 +90,7 @@ export function LearningPath({ activeStage, onSelect }: Props) {
               </div>
             </CardContent>
           </Card>
-          <Card variant="frosted" className="border-emerald-300/25 bg-emerald-300/[.07] py-0">
+          <Card className="border border-emerald-300/25 bg-emerald-300/[.07] py-0 backdrop-blur-md">
             <CardContent className="flex gap-4 p-4">
               <Gauge
                 aria-hidden
