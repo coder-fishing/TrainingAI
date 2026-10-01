@@ -1,6 +1,93 @@
-import { BookOpen, BrainCircuit, Cpu, Database, Network, Wrench } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  BookOpen,
+  BrainCircuit,
+  Cpu,
+  Database,
+  Network,
+  Wrench,
+} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/glass/card";
 import { stages } from "@/data/learning-map";
 import { SectionHeading } from "./section-heading";
 const icons = [BrainCircuit, BookOpen, Cpu, Database, Wrench, Network];
-export function StageDetails() { return <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8"><SectionHeading eyebrow="SIX CONNECTED LESSONS" title="The detail beneath each node." copy="Read the educational content as a progression of capabilities, not a strict taxonomy." /><div className="mt-12 grid gap-5 lg:grid-cols-2">{stages.map((stage, index) => { const Icon = icons[index]; return <Card id={stage.id} key={stage.id} className={`scroll-mt-24 border py-0 backdrop-blur-md ${index >= 3 ? "border-violet-300/25 bg-violet-300/[.07]" : "border-white/15 bg-white/[.055]"}`}><CardHeader className="p-6"><p className="font-mono text-xs tracking-[.16em] text-cyan-300">{stage.number} / LEARNING STAGE</p><CardTitle className="mt-3 text-2xl text-white">{stage.title}</CardTitle><Icon aria-hidden className="absolute right-6 top-6 size-6 text-violet-300" /></CardHeader><CardContent className="p-6 pt-0"><p className="leading-7 text-slate-300">{stage.definition}</p><dl className="mt-7 grid gap-5 border-t border-white/10 pt-6 sm:grid-cols-2"><div><dt className="font-mono text-[11px] tracking-wider text-slate-400">ROLE IN AI</dt><dd className="mt-2 text-sm leading-6 text-slate-200">{stage.role}</dd></div><div><dt className="font-mono text-[11px] tracking-wider text-slate-400">INHERITS FROM</dt><dd className="mt-2 text-sm leading-6 text-slate-200">{stage.inherits}</dd></div></dl><div className="mt-5 border-l-2 border-violet-300/70 bg-violet-300/[.08] px-4 py-3"><p className="font-mono text-[11px] tracking-wider text-violet-200">SIMPLE EXAMPLE</p><p className="mt-1 text-sm leading-6 text-slate-200">{stage.example}</p></div><div className="mt-5 flex flex-wrap gap-2">{stage.keywords.map((keyword) => <span key={keyword} className="rounded border border-white/12 bg-slate-950/40 px-2.5 py-1.5 font-mono text-[11px] text-cyan-100 transition hover:border-cyan-300/50 hover:text-cyan-200">{keyword}</span>)}</div><p className="mt-6 text-xs leading-5 text-slate-400"><span className="font-mono text-slate-300">SOURCE / </span>{stage.source}</p></CardContent></Card>; })}</div></section>; }
+export function StageDetails() {
+  return (
+    <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+      <SectionHeading
+        eyebrow="SIX CONNECTED LESSONS"
+        title="The detail beneath each node."
+        copy="Read the educational content as a progression of capabilities, not a strict taxonomy."
+      />
+      <div className="mt-12 grid gap-5 lg:grid-cols-2">
+        {stages.map((stage, index) => {
+          const Icon = icons[index];
+          return (
+            <Card
+              variant={index >= 3 ? "frosted" : "glass"}
+              hover="lift"
+              id={stage.id}
+              key={stage.id}
+              className={`scroll-mt-24 border py-0 backdrop-blur-md ${index >= 3 ? "border-violet-300/25 bg-violet-300/[.07]" : "border-white/15 bg-white/[.055]"}`}
+            >
+              <CardHeader className="p-6">
+                <p className="font-mono text-xs tracking-[.16em] text-cyan-300">
+                  {stage.number} / LEARNING STAGE
+                </p>
+                <CardTitle className="mt-3 text-2xl text-white">
+                  {stage.title}
+                </CardTitle>
+                <Icon
+                  aria-hidden
+                  className="absolute right-6 top-6 size-6 text-violet-300"
+                />
+              </CardHeader>
+              <CardContent className="p-6 pt-0">
+                <p className="leading-7 text-slate-300">{stage.definition}</p>
+                <dl className="mt-7 grid gap-5 border-t border-white/10 pt-6 sm:grid-cols-2">
+                  <div>
+                    <dt className="font-mono text-[11px] tracking-wider text-slate-400">
+                      ROLE IN AI
+                    </dt>
+                    <dd className="mt-2 text-sm leading-6 text-slate-200">
+                      {stage.role}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono text-[11px] tracking-wider text-slate-400">
+                      INHERITS FROM
+                    </dt>
+                    <dd className="mt-2 text-sm leading-6 text-slate-200">
+                      {stage.inherits}
+                    </dd>
+                  </div>
+                </dl>
+                <div className="mt-5 border-l-2 border-violet-300/70 bg-violet-300/[.08] px-4 py-3">
+                  <p className="font-mono text-[11px] tracking-wider text-violet-200">
+                    SIMPLE EXAMPLE
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-slate-200">
+                    {stage.example}
+                  </p>
+                </div>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {stage.keywords.map((keyword) => (
+                    <span
+                      key={keyword}
+                      className="rounded border border-white/12 bg-slate-950/40 px-2.5 py-1.5 font-mono text-[11px] text-cyan-100 transition hover:border-cyan-300/50 hover:text-cyan-200"
+                    >
+                      {keyword}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-6 text-xs leading-5 text-slate-400">
+                  <span className="font-mono text-slate-300">SOURCE / </span>
+                  {stage.source}
+                </p>
+              </CardContent>
+            </Card>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
