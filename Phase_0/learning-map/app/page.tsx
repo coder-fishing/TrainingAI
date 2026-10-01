@@ -1,5 +1,5 @@
-import LearningMap from "./learning-map";
+import LearningMapPage from "./learning-map-page";
 
 export default function Home() {
-  return <LearningMap />;
+  return <LearningMapPage />;
 }
