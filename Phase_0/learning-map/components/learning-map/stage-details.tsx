@@ -22,13 +22,7 @@ export function StageDetails() {
         {stages.map((stage, index) => {
           const Icon = icons[index];
           return (
-            <Card
-              variant={index >= 3 ? "frosted" : "glass"}
-              hover="lift"
-              id={stage.id}
-              key={stage.id}
-              className={`scroll-mt-24 py-0 ${index >= 3 ? "border-violet-300/25" : "border-white/15"}`}
-            >
+            <Card id={stage.id} key={stage.id} className="scroll-mt-24 py-0">
               <CardHeader className="p-6">
                 <p className="font-mono text-xs tracking-[.16em] text-cyan-300">
                   {stage.number} / LEARNING STAGE

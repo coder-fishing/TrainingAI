@@ -31,9 +31,7 @@ export function LearningPath({ activeStage, onSelect }: Props) {
             const active = activeStage === stage.id;
             return (
               <div key={stage.id} className="flex min-w-0 flex-1 items-center">
-                <Card
-                  className={`min-h-28 flex-1 border bg-white/[.055] py-0 backdrop-blur-md transition hover:bg-white/[.09] ${active ? "border-cyan-300/80 shadow-[0_0_32px_rgba(34,211,238,.12)]" : "border-white/15"}`}
-                >
+                <Card className="min-h-28 flex-1 py-0">
                   <CardContent className="p-0">
                     <button
                       aria-current={active ? "step" : undefined}
@@ -73,7 +71,7 @@ export function LearningPath({ activeStage, onSelect }: Props) {
           })}
         </div>
         <div className="mt-8 grid gap-3">
-          <Card className="border border-cyan-300/25 bg-cyan-300/[.07] py-0 backdrop-blur-md">
+          <Card className="py-0">
             <CardContent className="flex gap-4 p-4">
               <ShieldCheck
                 aria-hidden
@@ -90,7 +88,7 @@ export function LearningPath({ activeStage, onSelect }: Props) {
               </div>
             </CardContent>
           </Card>
-          <Card className="border border-emerald-300/25 bg-emerald-300/[.07] py-0 backdrop-blur-md">
+          <Card className="py-0">
             <CardContent className="flex gap-4 p-4">
               <Gauge
                 aria-hidden
