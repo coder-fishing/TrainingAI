@@ -18,7 +18,7 @@ const icons = [BrainCircuit, BookOpen, Cpu, Database, Wrench, Network];
 type Props = { activeStage: string; onSelect: (id: string) => void };
 export function LearningPath({ activeStage, onSelect }: Props) {
   return (
-    <section id="path" className="border-y border-white/10">
+    <section id="path" className="">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <SectionHeading
           eyebrow="THE PRIMARY VISUAL"

@@ -13,7 +13,7 @@ import { SectionHeading } from "./section-heading";
 
 export function BooksSection() {
   return (
-    <section id="books" className="border-y border-white/10">
+    <section id="books" className="">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
         <SectionHeading
           eyebrow="CURRICULUM BOOKS"

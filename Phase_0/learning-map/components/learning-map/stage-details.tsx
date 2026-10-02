@@ -23,7 +23,7 @@ export function StageDetails() {
           const Icon = icons[index];
           return (
             <Card id={stage.id} key={stage.id} className="scroll-mt-24 py-0">
-              <CardHeader className="min-h-36 p-6">
+              <CardHeader className="min-h-[9rem] p-6">
                 <p className="font-mono text-xs tracking-[.16em] text-cyan-300">
                   {stage.number} / LEARNING STAGE
                 </p>
@@ -36,10 +36,10 @@ export function StageDetails() {
                 />
               </CardHeader>
               <CardContent className="flex flex-1 flex-col p-6 pt-0">
-                <p className="min-h-14 leading-7 text-slate-300">
+                <p className="min-h-[4rem] leading-7 text-slate-300">
                   {stage.definition}
                 </p>
-                <dl className="mt-7 grid min-h-29 gap-5 border-t border-white/10 pt-6 sm:grid-cols-2">
+                <dl className="mt-7 grid min-h-[7.5rem] gap-5 border-t border-white/10 pt-6 sm:grid-cols-2">
                   <div>
                     <dt className="font-mono text-[11px] tracking-wider text-slate-400">
                       ROLE IN AI
@@ -57,7 +57,7 @@ export function StageDetails() {
                     </dd>
                   </div>
                 </dl>
-                <div className="mt-5 min-h-21 border-l-2 border-violet-300/70 bg-violet-300/[.08] px-4 py-3">
+                <div className="mt-5 min-h-[5.25rem] border-l-2 border-violet-300/70 bg-violet-300/[.08] px-4 py-3">
                   <p className="font-mono text-[11px] tracking-wider text-violet-200">
                     SIMPLE EXAMPLE
                   </p>
@@ -65,7 +65,7 @@ export function StageDetails() {
                     {stage.example}
                   </p>
                 </div>
-                <div className="mt-5 flex min-h-19 flex-wrap content-start gap-2">
+                <div className="mt-5 flex min-h-[5.5rem] flex-wrap content-start gap-2">
                   {stage.keywords.map((keyword) => (
                     <span
                       key={keyword}
