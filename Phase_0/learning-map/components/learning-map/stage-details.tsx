@@ -23,7 +23,7 @@ export function StageDetails() {
           const Icon = icons[index];
           return (
             <Card id={stage.id} key={stage.id} className="scroll-mt-24 py-0">
-              <CardHeader className="p-6">
+              <CardHeader className="min-h-36 p-6">
                 <p className="font-mono text-xs tracking-[.16em] text-cyan-300">
                   {stage.number} / LEARNING STAGE
                 </p>
@@ -35,9 +35,11 @@ export function StageDetails() {
                   className="absolute right-6 top-6 size-6 text-violet-300"
                 />
               </CardHeader>
-              <CardContent className="p-6 pt-0">
-                <p className="leading-7 text-slate-300">{stage.definition}</p>
-                <dl className="mt-7 grid gap-5 border-t border-white/10 pt-6 sm:grid-cols-2">
+              <CardContent className="flex flex-1 flex-col p-6 pt-0">
+                <p className="min-h-14 leading-7 text-slate-300">
+                  {stage.definition}
+                </p>
+                <dl className="mt-7 grid min-h-29 gap-5 border-t border-white/10 pt-6 sm:grid-cols-2">
                   <div>
                     <dt className="font-mono text-[11px] tracking-wider text-slate-400">
                       ROLE IN AI
@@ -55,7 +57,7 @@ export function StageDetails() {
                     </dd>
                   </div>
                 </dl>
-                <div className="mt-5 border-l-2 border-violet-300/70 bg-violet-300/[.08] px-4 py-3">
+                <div className="mt-5 min-h-21 border-l-2 border-violet-300/70 bg-violet-300/[.08] px-4 py-3">
                   <p className="font-mono text-[11px] tracking-wider text-violet-200">
                     SIMPLE EXAMPLE
                   </p>
@@ -63,7 +65,7 @@ export function StageDetails() {
                     {stage.example}
                   </p>
                 </div>
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-5 flex min-h-19 flex-wrap content-start gap-2">
                   {stage.keywords.map((keyword) => (
                     <span
                       key={keyword}
@@ -73,7 +75,7 @@ export function StageDetails() {
                     </span>
                   ))}
                 </div>
-                <p className="mt-6 text-xs leading-5 text-slate-400">
+                <p className="mt-auto pt-6 text-xs leading-5 text-slate-400">
                   <span className="font-mono text-slate-300">SOURCE / </span>
                   {stage.source}
                 </p>
