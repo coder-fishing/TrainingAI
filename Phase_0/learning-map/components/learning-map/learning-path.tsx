@@ -18,7 +18,7 @@ const icons = [BrainCircuit, BookOpen, Cpu, Database, Wrench, Network];
 type Props = { activeStage: string; onSelect: (id: string) => void };
 export function LearningPath({ activeStage, onSelect }: Props) {
   return (
-    <section id="path" className="border-y border-white/10">
+    <section id="path" className="">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <SectionHeading
           eyebrow="THE PRIMARY VISUAL"
@@ -36,25 +36,25 @@ export function LearningPath({ activeStage, onSelect }: Props) {
                     <button
                       aria-current={active ? "step" : undefined}
                       onClick={() => onSelect(stage.id)}
-                      className="min-h-28 w-full p-4 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                      className="min-h-28 w-full p-4 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
                     >
                       <span className="flex justify-between">
-                        <span className="font-mono text-xs text-slate-400">
+                        <span className="font-mono text-xs text-muted-foreground">
                           {stage.number}
                         </span>
                         <Icon
                           aria-hidden
                           className={
                             active
-                              ? "size-5 text-cyan-300"
-                              : "size-5 text-violet-300"
+                              ? "size-5 text-primary"
+                              : "size-5 text-[var(--secondary-accent)]"
                           }
                         />
                       </span>
-                      <strong className="mt-5 block text-base text-white">
+                      <strong className="mt-5 block text-base text-foreground">
                         {stage.short}
                       </strong>
-                      <span className="mt-1 block text-xs leading-5 text-slate-400">
+                      <span className="mt-1 block text-xs leading-5 text-muted-foreground">
                         {stage.title}
                       </span>
                     </button>
@@ -63,7 +63,7 @@ export function LearningPath({ activeStage, onSelect }: Props) {
                 {index < stages.length - 1 && (
                   <ArrowRight
                     aria-hidden
-                    className="mx-2 hidden shrink-0 text-cyan-300/70 lg:block"
+                    className="mx-2 hidden shrink-0 text-primary/70 lg:block"
                   />
                 )}
               </div>
@@ -75,13 +75,13 @@ export function LearningPath({ activeStage, onSelect }: Props) {
             <CardContent className="flex gap-4 p-4">
               <ShieldCheck
                 aria-hidden
-                className="mt-.5 size-5 shrink-0 text-cyan-300"
+                className="mt-.5 size-5 shrink-0 text-primary"
               />
               <div>
-                <p className="font-mono text-xs font-semibold tracking-wider text-cyan-200">
+                <p className="font-mono text-xs font-semibold tracking-wider text-primary">
                   EVALUATION MINDSET · ALL SIX STAGES
                 </p>
-                <p className="mt-1 text-sm text-slate-300">
+                <p className="mt-1 text-sm text-muted-foreground">
                   Evaluate · benchmark · analyze errors before declaring a
                   system capable.
                 </p>
@@ -92,13 +92,13 @@ export function LearningPath({ activeStage, onSelect }: Props) {
             <CardContent className="flex gap-4 p-4">
               <Gauge
                 aria-hidden
-                className="mt-.5 size-5 shrink-0 text-emerald-300"
+                className="mt-.5 size-5 shrink-0 text-emerald-600 dark:text-emerald-300"
               />
               <div>
-                <p className="font-mono text-xs font-semibold tracking-wider text-emerald-200">
+                <p className="font-mono text-xs font-semibold tracking-wider text-emerald-700 dark:text-emerald-200">
                   PRODUCTION MINDSET · ALL SIX STAGES
                 </p>
-                <p className="mt-1 text-sm text-slate-300">
+                <p className="mt-1 text-sm text-muted-foreground">
                   Latency · cost · guardrails · feedback loops shape real use.
                 </p>
               </div>

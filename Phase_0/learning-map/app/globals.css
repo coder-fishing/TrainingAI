@@ -46,8 +46,11 @@
 
 :root {
   --radius: 0.625rem;
+  --canvas: #eff5ff;
+  --canvas-grid: rgba(71, 101, 144, 0.12);
+  --secondary-accent: #6d5bd0;
   /* Base colors - Light mode with dark text */
-  --background: transparent;
+  --background: #eff5ff;
   --foreground: oklch(0.15 0 0); /* Near black - dark text for light mode */
   --card: transparent;
   --card-foreground: oklch(0.15 0 0); /* Near black - dark text */
@@ -168,6 +171,9 @@
 }
 
 .dark {
+  --canvas: #0a0f1c;
+  --canvas-grid: rgba(148, 163, 184, 0.055);
+  --secondary-accent: #c4b5fd;
   /* Apple-standard glassmorphism for dark mode - Very subtle and refined */
   /* Very low opacity for Apple's standard glass effect in dark mode */
   --glass-bg: linear-gradient(135deg, 
@@ -232,7 +238,7 @@
     0 0 35px rgba(255, 255, 255, 0.2);
   
   /* Base colors - Apple-style white text */
-  --background: transparent;
+  --background: #0a0f1c;
   --foreground: oklch(1 0 0); /* White - Apple-style */
   --card: transparent;
   --card-foreground: oklch(1 0 0); /* White - Apple-style */
@@ -293,10 +299,10 @@ body {
 }
 
 .glass-canvas {
-  background-color: #0a0f1c;
+  background-color: var(--canvas);
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.055) 1px, transparent 1px);
+    linear-gradient(var(--canvas-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--canvas-grid) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
